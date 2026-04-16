@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional AI Assistant</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <aside class="sidebar">
+            <button class="new-chat-btn">Files You Uploaded</button>
+                <div id="file-list" class="file-list">
+                    <!-- Dynamically populated file list -->
+                     
+                </div>
+
+           
+        </aside>
+
+        <main class="chat-wrapper">
+            <header class="chat-header">
+                <h2>AI Assistant</h2>
+                <span class="status-dot"></span>
+            </header>
+
+            <div id="chat-display" class="chat-display">
+                <div class="message-row ai-row">
+                    <div class="avatar ai-avatar"><i class="fa-solid fa-robot"></i></div>
+                    <div class="message-bubble ai-bubble">
+                        Hello! I am your AI assistant. You can ask me questions or upload documents (PDF, DOCX, TXT) for me to analyze. How can I help you today?
+                    </div>
+                </div>
+            </div>
+
+            <div class="input-section">
+                <div id="file-preview-container" class="file-preview-container hidden">
+                    <div class="file-chip">
+                        <i class="fa-solid fa-file-lines"></i>
+                        <span id="file-name">filename.pdf</span>
+                        <button id="remove-file-btn"><i class="fa-solid fa-xmark"></i></button>
+                    </div>
+                </div>
+
+                <div class="input-box">
+                    <label for="file-upload" class="icon-btn" title="Attach File">
+                        <i class="fa-solid fa-paperclip"></i>
+                    </label>
+                    <input type="file" id="file-upload" accept=".pdf,.doc,.docx,.txt" hidden>
+                    
+                    <textarea id="user-input" placeholder="Type your message..." rows="1"></textarea>
+                    
+                    <button id="send-btn" class="icon-btn send-btn" title="Send Message">
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                </div>
+                <div class="footer-text">AI can make mistakes. Consider verifying important information.</div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
